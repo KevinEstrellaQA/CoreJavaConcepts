@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+package c01_beginner;
 
 public class VariablesAndConstants {
 

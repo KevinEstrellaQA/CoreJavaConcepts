@@ -1,3 +1,5 @@
+package c01_beginner;
+
 public class BeginnersExercises {
 
     public static void main(String[] args) {
