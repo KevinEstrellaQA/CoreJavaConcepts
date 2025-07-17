@@ -19,3 +19,7 @@ A lo largo de los archivos de este repositorio encontrarás temas como:
 ## Propósito
 
 Este proyecto fue creado como parte de mi aprendizaje y fortalecimiento de conocimientos en Java. La intención es practicar, documentar y compartir conceptos clave del lenguaje, sirviendo como referencia para otros desarrolladores y como material de repaso personal.
+
+## Créditos
+
+Siguiendo clases, ejemplos y ejercicios del curso de MoureDev: https://github.com/mouredev
