@@ -143,7 +143,7 @@ public class ClassesExercises {
             System.out.println("El perímetro del triángulo es " + perimeter());
         }
         public double area (){
-            return width * height / 2;
+            return width * height;
         }
         public double perimeter(){
             return 2 * width * height;
