@@ -1,9 +1,8 @@
 package c08_oop;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class PlymorphismExercises {
+public class PolymorphismExercises {
     public static void main(String[] args) {
         // 1. Crea una clase Animal con el méto-do makeSound(). Luego crea subclases Dog, Cat y Cow que sobrescriban ese méto-do con sonidos diferentes. Llama al méto-do desde una lista de Animal.
         System.out.println("Ejercicio 1");
