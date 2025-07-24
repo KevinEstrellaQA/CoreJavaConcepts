@@ -50,22 +50,38 @@ public class PlymorphismExercises {
 
         // 6. Crea una clase Notification con méto-do send(), y subclases EmailNotification, SMSNotification. Luego crea una función sendNotification(Notification n) que reciba cualquier tipo y lo ejecute.
         System.out.println("\nEjercicio 6");
-
+        sendNotification(new EmailNotification());
+        sendNotification(new SMSNotification());
 
         // 7. Crea una función showAnimalType(Animal animal) que imprima el tipo de animal. Pasa diferentes subclases (Dog, Cat, Horse) para que cada una imprima su tipo con su propio getType() sobrescrito.
         System.out.println("\nEjercicio 7");
-
+        showAnimalType(new DogType());
+        showAnimalType(new CatType());
+        showAnimalType(new HorseType());
 
         // 8. Crea una clase Converter con métodos convert(int), convert(double), y convert(String) que devuelvan diferentes formatos de texto.
         System.out.println("\nEjercicio 8");
-
+        Converter converter = new Converter();
+        System.out.println(converter.convert(34));
+        System.out.println(converter.convert(10.556));
+        System.out.println(converter.convert("Prueba"));
 
         // 9. Crea una clase Product con el méto-do getPrice(). Luego, Book y Electronic deben sobrescribirlo con su propia lógica de descuento. Recorre una lista de Product e imprime el precio final de cada uno.
         System.out.println("\nEjercicio 9");
-
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Book(150));
+        products.add(new Electronic(600));
+        products.add(new Book(100));
+        for(Product product : products){
+            System.out.println("Precio con descuento: $" + product.getPrice());
+        }
 
         // 10. Crea una clase Character con méto-do attack(). Luego crea subclases Warrior, Archer, Mage con ataques diferentes. En main, crea un array de Character y llama a attack() para cada uno.
         System.out.println("\nEjercicio 10");
+        Character[] characters = {new Warrior(), new Archer(), new Mage()};
+        for(Character character : characters){
+            character.attack();
+        }
 
     }
     //1.
@@ -163,6 +179,119 @@ public class PlymorphismExercises {
         @Override
         public void start(){
             System.out.println("El camión está encendiendo");
+        }
+    }
+
+    //6.
+    public static class Notification{
+        public void send(){
+            System.out.println("Enviando notificación");
+        }
+    }
+    public static class EmailNotification extends Notification{
+        @Override
+        public void send(){
+            System.out.println("Enviando notificación por email");
+        }
+    }
+    public static class SMSNotification extends Notification{
+        @Override
+        public void send(){
+            System.out.println("Enviando notificación por SMS");
+        }
+    }
+    public static void sendNotification(Notification notification){
+        notification.send();
+    }
+
+    //7.
+    public static abstract class AnimalType{
+        public abstract String getType();
+    }
+    public static class DogType extends AnimalType{
+        @Override
+        public String getType(){
+            return "Perro";
+        }
+    }
+    public static class CatType extends AnimalType{
+        @Override
+        public String getType(){
+            return "Gato";
+        }
+    }
+    public static class HorseType extends AnimalType{
+        @Override
+        public String getType(){
+            return "Caballo";
+        }
+    }
+    public static void showAnimalType(AnimalType animal){
+        System.out.println("Tipo de animal: " + animal.getType());
+    }
+
+    //8.
+    public static class Converter{
+        public String convert(int num){
+            return "Número entero original: " + num + " -> Número convertido: '" + num + "'";
+        }
+        public String convert(double num){
+            return "Número decimal convertido: " + num + " -> Número convertido '" + String.format("%.2f", num) + "'";
+        }
+        public String convert(String text){
+            return "Texto original: " + text + " -> Texto convertido '" + text.toUpperCase() + "'";
+        }
+    }
+
+    //9.
+    public static class Product{
+        protected double price;
+        public Product(double price){
+            this.price = price;
+        }
+        public double getPrice(){
+            return price;
+        }
+    }
+    public static class Book extends Product{
+        public Book(double price){
+            super(price);
+        }
+        @Override
+        public double getPrice() {
+            return price - (price * 25 / 100);
+        }
+    }
+    public static class Electronic extends Product{
+        public Electronic(double price){
+            super(price);
+        }
+        @Override
+        public double getPrice() {
+            return price - (price * 10 / 100);
+        }
+    }
+
+    //10.
+    public static abstract class Character{
+        public abstract void attack();
+    }
+    public static class Warrior extends Character{
+        @Override
+        public void attack(){
+            System.out.println("El guerrero ha atacado");
+        }
+    }
+    public static class Archer extends Character{
+        @Override
+        public void attack(){
+            System.out.println("Ël arquero ha atacado");
+        }
+    }
+    public static class Mage extends Character{
+        @Override
+        public void attack(){
+            System.out.println("El mago ha atacado");
         }
     }
 }
