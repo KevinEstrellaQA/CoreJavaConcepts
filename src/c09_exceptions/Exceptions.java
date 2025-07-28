@@ -1,4 +1,4 @@
-package c08_oop;
+package c09_exceptions;
 // Importante: debes realizar los import correspondientes de la clases CustomException y ThrowExample
 
 public class Exceptions {
@@ -15,18 +15,18 @@ public class Exceptions {
             System.out.println("Error: " + e);
         }
 
-        // try con mÃºltiples catch
+        // try con múltiples catch
         try {
             var result = 10 / 5;
             System.out.println(result);
 
-            var name = "Brais";
+            var name = "Eduardo";
             name = null;
             System.out.println("Name: " + name.toUpperCase());
         } catch (ArithmeticException e) {
             System.out.println("Cuidado con dividir algo que no puedes: " + e);
         } catch (NullPointerException e) {
-            System.out.println("Ha ocurrido un null pointer mÃ­tico!");
+            System.out.println("Ha ocurrido un null pointer mítico!");
         } catch (Exception e) {
             System.out.println("Se ha producido un error no esperado");
         }
@@ -49,11 +49,11 @@ public class Exceptions {
             System.out.println("Error revisando la edad: " + e.getMessage());
         }
 
-        // ExcepciÃ³n personalizada
+        // Excepción personalizada
         try {
             throwExample.checkScore(450);
         } catch (CustomException e) {
-            System.out.println("Error revisando la puntuaciÃ³n: " + e.getMessage());
+            System.out.println("Error revisando la puntuación: " + e.getMessage());
         }
 
         System.out.println("Fin");
