@@ -1,24 +1,75 @@
-# Fundamentos de Java
+# Curso de Java - Fundamentos y Programación Orientada a Objetos
 
-Este repositorio contiene una colección de ejemplos y explicaciones orientadas a comprender los **fundamentos del lenguaje de programación Java**. Está diseñado como un recurso educativo tanto para principiantes como para quienes desean repasar los conceptos base de Java de forma estructurada y práctica.
+Este repositorio contiene el desarrollo estructurado de un curso introductorio a Java. El contenido está dividido por módulos (paquetes) que cubren desde lo más básico hasta conceptos más avanzados de la programación orientada a objetos (OOP).
 
-## Contenido
+## Estructura del Curso
 
-A lo largo de los archivos de este repositorio encontrarás temas como:
+Cada carpeta (`c00`, `c01`, etc.) representa una sección temática del curso:
 
-- 📌 Tipos de datos primitivos (`int`, `boolean`, `char`, etc.)
-- 🔁 Estructuras de control (`if`, `switch`, `while`, `for`)
-- 🧮 Operadores aritméticos, lógicos y de comparación
-- 🧰 Métodos y parámetros
-- 🗂️ Clases, objetos y métodos estáticos (`static`)
-- 👥 Encapsulamiento, constructores y uso de `this`
-- 📚 Uso de colecciones como `ArrayList` y estructuras como `HashMap`, `HashSet`
-- 🔄 Bucles y control de flujo (`break`, `continue`, etc.)
-- 📦 Organización en paquetes (`package`) y visibilidad (`public`, `private`, etc.)
+### 📘 c00. Clase básica
+- Introducción al lenguaje Java
+- Ejemplo clásico: `HelloWorld`
 
-## Propósito
+### 🧮 c01. Variables y constantes
+- Declaración y tipos de variables
+- Uso de constantes (`final`)
 
-Este proyecto fue creado como parte de mi aprendizaje y fortalecimiento de conocimientos en Java. La intención es practicar, documentar y compartir conceptos clave del lenguaje, sirviendo como referencia para otros desarrolladores y como material de repaso personal.
+### ➕ c02. Operadores
+- Aritméticos, lógicos, relacionales y de asignación
+
+### 🔤 c03. Strings
+- Manipulación de cadenas de texto
+- Métodos comunes de la clase `String`
+
+### 🔀 c04. Condicionales
+- Uso de `if`, `else if`, `else`
+- Expresiones booleanas
+- Operador ternario
+
+### 📦 c05. Estructuras de datos
+- `Arrays` y `ArrayList`
+- Colecciones como `HashSet` y `HashMap`
+
+### 🔁 c06. Loops
+- Estructuras de repetición: `for`, `while`, `do-while`
+- Bucles anidados y control de flujo con `break` y `continue`
+
+### 🧩 c07. Funciones o métodos
+- Declaración y uso de métodos
+- Parámetros, retorno y sobrecarga de métodos
+
+### 🧱 c08. Programación Orientada a Objetos (OOP)
+- Principios de OOP:
+  - **Encapsulamiento**
+  - **Herencia**
+  - **Polimorfismo**
+  - **Abstracción**
+- Composición 
+
+### 🚨 c09. Excepciones
+- Manejo de errores con `try`, `catch`, `finally`
+- Excepciones personalizadas
+
+### 🧠 c10. Conceptos adicionales
+- Alcance de variables (`scope`)
+- Modificador `static`
+- Valor `null`
+- Uso de `import`
+- Entrada de datos con `Scanner`
+
+---
+
+## 🎯 Objetivo
+
+Brindar una base sólida en la sintaxis, estructuras y conceptos clave de Java para principiantes o personas que deseen reforzar su conocimiento antes de pasar a frameworks como Spring o automatización con herramientas como Selenium.
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso libre con fines educativos. 
+
+---
 
 ## Créditos
 
